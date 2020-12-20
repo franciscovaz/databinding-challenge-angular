@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  numbersArray: Array<number> = [];
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
 
   onStartGame(startGameCounter: { incrementedOnStart: number }) {
-    console.log('No app: ', startGameCounter.incrementedOnStart);
-    this.numbersArray.push(startGameCounter.incrementedOnStart);
+    if( startGameCounter.incrementedOnStart % 2 === 0) {
+      this.evenNumbers.push(startGameCounter.incrementedOnStart);
+    } else {
+      this.oddNumbers.push(startGameCounter.incrementedOnStart);
+    }
   }
 }

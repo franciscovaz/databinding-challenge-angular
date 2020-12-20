@@ -1,19 +1,9 @@
 <app-game-control (startGameEvent)="onStartGame($event)"></app-game-control>
-<div *ngFor="let number of numbersArray">
-  <div *ngIf="number % 2; else oddNumber">
-    <app-even>
-      <p>
-        Odd - {{ number }}
-      </p>
-    </app-even>
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <app-even *ngFor="let evens of evenNumbers" [number]="evens"></app-even>
+    <app-odd *ngFor="let odd of oddNumbers" [number]="odd"></app-odd>
   </div>
-
-  <ng-template #oddNumber>
-    <app-odd>
-      <p>
-        Even - {{ number }}
-      </p>
-    </app-odd>
-  </ng-template>
-
 </div>

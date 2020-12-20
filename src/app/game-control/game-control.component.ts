@@ -21,10 +21,10 @@ export class GameControlComponent implements OnInit {
     console.log('Vamos começar!');
 
     this.incrementInterval = setInterval(() => {
-      this.incrementedOnStart++;
       this.startGameEvent.emit({
         incrementedOnStart: this.incrementedOnStart
       });
+      this.incrementedOnStart++;
     }, 1000);
   }
 
