@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'databinding-challenge';
+
+  onStartGame(startGameCounter: { incrementedOnStart: number }) {
+    console.log('No app: ', startGameCounter.incrementedOnStart);
+  }
 }
