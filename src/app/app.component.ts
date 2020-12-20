@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'databinding-challenge';
+  numbersArray: Array<number> = [];
 
   onStartGame(startGameCounter: { incrementedOnStart: number }) {
     console.log('No app: ', startGameCounter.incrementedOnStart);
+    this.numbersArray.push(startGameCounter.incrementedOnStart);
   }
 }
